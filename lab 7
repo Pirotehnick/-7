@@ -1,0 +1,12 @@
+def decorator(func):
+     def wrapper():
+         print("До вызова декорируемой функции")
+         result = func()
+         print("После вызова декорируемой функции")
+         return result
+     return wrapper
+
+ def some_function():
+     print("Вызвана функция some_function")
+
+ some_function = decorator(some_function)
